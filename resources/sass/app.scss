@@ -1,5 +1,12 @@
 @import "node_modules/bootstrap/scss/bootstrap";
-
+.main-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    main{
+        flex-grow: 1;
+    }
+}
 header{
     a{
         text-decoration: none;
