@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dettagli</title>
-</head>
-<body>
-    {{$fumetto->description}}
-</body>
-</html>
+@extends('layouts.app')
+
+@section('page_title',$fumetto->title)
+    
+@section('page_content')
+{{$fumetto->description}}
+
+@endsection
+
