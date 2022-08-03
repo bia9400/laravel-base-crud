@@ -38,7 +38,7 @@
 
         <div class="d-flex gap-2">
             <button type="submit" class="btn btn-success">Salva</button>
-            <a href="">Annulla</a>
+            <a href="{{route("comics.index")}}">Annulla</a>
         </div>
 
 
