@@ -3,7 +3,10 @@
 @section('page_title',$fumetto->title)
     
 @section('page_content')
-{{$fumetto->description}}
+<div class="container py-3 text-center">
+    {{$fumetto->description}}
+</div>
+
 
 @endsection
 

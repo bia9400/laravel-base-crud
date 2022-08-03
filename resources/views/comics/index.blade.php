@@ -1,17 +1,24 @@
 @extends('layouts.app')
 
-@section('page_title',"Comics")
-    
+@section('page_title', 'Comics')
+
 @section('page_content')
-    <h1>Lista fumetti</h1>
-<a href="{{route("comics.create")}}" class="btn btn-link">Aggiungi</a>
-    @foreach ($fumetti as $item)
-        <h3>{{ $item->title }}</h3>
-        <p>{{ $item->description }}</p>
-        <a href="{{ route('comics.show', $item->id) }}">show</a>
-    @endforeach
+    <div class="container py-3 text-center">
+        <a href="{{ route('comics.create') }}" class="btn btn-danger">Aggiungi</a>
+        <h1 class="mt-5 py-3 text-start">Lista fumetti:</h1>
+        <div class="row mb-3 text-start">
+            @foreach ($fumetti as $item)
+                <div class="col ">
+                    <div class="card bg-danger h-100 px-2">
+                        <h3 class="text-center">{{ $item->title }}</h3>
+                        <p class="text-white">{{ $item->description }}</p>
+                        <a class="text-center" href="{{ route('comics.show', $item->id) }}">Details</a>
+                    </div>
+
+                </div>
+            @endforeach
+        </div>
+    </div>
+
 
 @endsection
-
-
-
