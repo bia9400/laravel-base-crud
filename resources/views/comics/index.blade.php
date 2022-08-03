@@ -14,7 +14,11 @@
                         <p class="text-white">{{ $item->description }}</p>
                         <a class="text-center" href="{{ route('comics.show', $item->id) }}">Details</a>
                         <a class="text-center" href="{{ route('comics.edit', $item->id) }}">Modifica</a>
-
+                        <form action="{{ route('comics.destroy', $item->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-primary">Elimina</button>
+                        </form>
                     </div>
 
                 </div>

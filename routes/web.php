@@ -23,3 +23,5 @@ Route::post("/comics","ComicsController@store")->name("comics.store");
 Route::get('/comics/{comic}',"ComicsController@show")->name("comics.show");
 Route::get("/comics/{comic}/edit","ComicsController@edit")->name("comics.edit");
 Route::patch("/comics/{comic}","ComicsController@update")->name("comics.update");
+Route::delete("/comics/{comic}","ComicsController@destroy")->name("comics.destroy");
+

@@ -88,6 +88,8 @@ class ComicsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $fumetto=Comics::findOrFail($id);
+        $fumetto->delete();
+        return redirect()->route("comics.index");
     }
 }
