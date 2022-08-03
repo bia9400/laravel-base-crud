@@ -60,9 +60,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comics $fumetto)
     {
-        //
+        return view("comics.edit",compact("fumetto"));
     }
 
     /**
@@ -74,7 +74,7 @@ class ComicsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**

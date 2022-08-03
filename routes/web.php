@@ -21,4 +21,5 @@ Route::get('/comics',"ComicsController@index")->name("comics.index");
 Route::get('/comics/create',"ComicsController@create")->name("comics.create");
 Route::post("/comics","ComicsController@store")->name("comics.store");
 Route::get('/comics/{comic}',"ComicsController@show")->name("comics.show");
-
+Route::get("/comics/{comic}/edit","ComicsController@edit")->name("comics.edit");
+Route::patch("/comics/{comic}","ComicsController@update")->name("comics.update");

@@ -10915,3 +10915,17 @@ textarea.form-control-lg {
 header a {
   text-decoration: none;
 }
+
+.principal {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-image: url("https://wallpaperaccess.com/full/2283525.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+.principal .banner {
+  background-color: rgba(0, 0, 0, 0.473);
+}

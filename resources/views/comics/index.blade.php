@@ -13,6 +13,8 @@
                         <h3 class="text-center">{{ $item->title }}</h3>
                         <p class="text-white">{{ $item->description }}</p>
                         <a class="text-center" href="{{ route('comics.show', $item->id) }}">Details</a>
+                        <a class="text-center" href="{{ route('comics.edit', $item->id) }}">Modifica</a>
+
                     </div>
 
                 </div>
