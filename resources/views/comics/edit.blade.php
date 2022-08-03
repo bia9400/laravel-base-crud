@@ -3,7 +3,8 @@
 @section('page_title', 'Edit')
 
 @section('page_content')
-    <form action="" method="post">
+
+    <form action="{{route("comics.update",$fumetto->id)}}" method="post">
         @csrf
         @method('PATCH')
         <div class="mb-3">

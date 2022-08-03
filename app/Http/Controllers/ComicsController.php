@@ -60,8 +60,8 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comics $fumetto)
-    {
+    public function edit($id)
+    {   $fumetto=Comics::findORFail($id);
         return view("comics.edit",compact("fumetto"));
     }
 
@@ -74,7 +74,10 @@ class ComicsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $data=$request->all();
+        $newFumetto= Comics::findOrFail($id);
+        $newFumetto->update($data);
+        return redirect()->route("comics.show",$newFumetto->id);
     }
 
     /**
